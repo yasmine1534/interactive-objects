@@ -1,4 +1,3 @@
-
 ## References
 
 Blush image taken from
@@ -24,7 +23,3 @@ SweetAlertSound3.wav by KIZILSUNGUR. (2021). Freesound. https://freesound.org/pe
 ## RaiseHand folder
 - Everytime the user raises their left wrist to ask a question, the question icon appears and an alert sound is played
 - Useful for an online classroom situation
-
-‌
-
-‌

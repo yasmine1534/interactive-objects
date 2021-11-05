@@ -22,13 +22,7 @@ PoseNet example using p5.js
 let video;
 let poseNet;
 let poses = [];
-let leftBlush;
-let rightBlush;
-
-function preload() {
-    leftBlush = loadImage("../images/leftBlush.png");
-    rightBlush = loadImage("../images/rightBlush.png");
-}
+let r, g, b;
 
 function setup() {
   createCanvas(640, 480);
@@ -45,6 +39,10 @@ function setup() {
   });
   // Hide the video element, and just show the canvas
   video.hide();
+
+  r = random(0, 255);
+  g = random(0, 255);
+  b = random(0, 255);
 }
 
 function modelReady() {
@@ -52,49 +50,32 @@ function modelReady() {
 }
 
 function mousePressed(){
-  console.log(JSON.stringify(poses))
+  r = random(0,255);
+  g = random(0,255);
+  b = random(0,255);
+
+  console.log("Random color is generated!");
 }
 
 function draw() {
-  image(video, 0, 0, width, height); 
-  //strokeWeight(2);
+  image(video, 0, 0, width, height);
+
+  // stroke(255, 255, 255);
+  // strokeWeight(2);
 
   //create transparent circles for now, only add color to points for testing purposes
   noStroke();
-  noFill();
+  // noFill();
 
   // For one pose only (use a for loop for multiple poses!)
   if (poses.length > 0) {
     const pose = poses[0].pose;
-      console.log(pose);
+      // console.log(pose);
 
     // Create a pink ellipse for the nose
     //fill(213, 0, 143);
+    fill(r, g, b);
     const nose = pose.nose;
-    ellipse(nose.x, nose.y, 20, 20);
-
-    // Create a yellow ellipse for the right eye
-    //fill(255, 215, 0);
-    const rightEye = pose.rightEye;
-    ellipse(rightEye.x, rightEye.y, 20, 20);
-
-    // Create a yellow ellipse for the right eye
-    //fill(255, 215, 0);
-    const leftEye = pose.leftEye;
-    ellipse(leftEye.x, leftEye.y, 20, 20);
-      
-    //fill(0,255,0);
-      const leftEar = pose.leftEar;
-    ellipse(leftEar.x, leftEar.y, 20, 20 ); 
-
-    //fill(0,255,0);
-    const rightEar = pose.rightEar;
-    ellipse(rightEar.x, rightEar.y, 20, 20 );  
-
-    push();
-    imageMode(CENTER);
-    image(leftBlush, ((leftEye.x + leftEar.x)/2), nose.y, 80, 80);
-    image(rightBlush, ((rightEye.x + rightEar.x)/2), nose.y, 80, 80);
-    pop();
+    ellipse(nose.x, nose.y, 30, 30);
   }
 }

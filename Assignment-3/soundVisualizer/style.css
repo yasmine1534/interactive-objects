@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#sketch {
+    z-index: -100;
+    position: relative;
+}
+
+.textBox {  
+    position: absolute;
+    padding: 5vh 0 0 5vw;
+    width: 100%;
+}
+
+h2, h3 {
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.controller {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    /* margin-left: 5vw; */
+}
+
+.controller > button:first-child {
+    margin-left: 0;
+}
+
+button {   
+    width: 65px;
+    height: 65px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 8px 24px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.playButton:hover {
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.button-small {
+    width: 50px;
+    height: 50px;
+
+    box-shadow: 0px 8px 24px 2px rgba(0, 0, 0, 0);
+    background-color: transparent;
+}
+
+.button-small:hover {
+    color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.material-icons {
+    font-size: 36px;
+}
+
+.playButton .material-icons {
+    color: #6DC175;
+}

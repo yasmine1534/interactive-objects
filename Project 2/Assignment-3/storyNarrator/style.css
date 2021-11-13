@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+#sketch {
+    z-index: -100;
+    position: relative;
+}
+
+.storyTitle {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    width: 100%;
+    /* width: 100%; */
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.75em;
+}
+
+p {
+    width: 50%;
+    margin: 0 auto;
+}
+
+button {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.buttonBox {
+    margin-top: 60px;  
+}
+
+.buttonBox > * {
+    margin-right: 25px;
+}
+
+.buttonBox > :last-child  {
+    margin-right: 0;
+}
+
+.circleButton {
+    background-color: #FFFCF0;
+    border: 3px solid #DEC298;
+}
+
+.gameButton {
+    padding: 0 60px;
+    height: 50px;
+    background-color: #9ACF57;
+    border: 3px solid #6C843B;
+    border-radius: 3px;
+}
+
+.gameButton:hover {
+    background-color: #8AC342;
+}
+
+#backbutton {
+    background-color: transparent;
+    display: none;
+}
+
+#backButton:hover {
+    background-color: #F1EAD0;
+}
+
+#muteButton {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#home {
+    display: none;
+}

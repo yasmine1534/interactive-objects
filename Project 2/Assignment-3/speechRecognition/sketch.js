@@ -9,8 +9,6 @@
 // http://patreon.com/codingtrain
 // Code for: https://youtu.be/q_bXBcmfTJM
 
- // new P5.SpeechRec object
-
 var continuous = true;
 var interim = false;
 var speechRec;

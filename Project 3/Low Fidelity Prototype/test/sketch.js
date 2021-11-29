@@ -8,6 +8,12 @@
 // https://youtu.be/pUhv2CA0omA
 // https://thecodingtrain.com/learning/nature-of-code/4.4-image-textures.html
 
+// Many Particle Systems (Emitters!)
+// The Nature of Code
+// The Coding Train / Daniel Shiffman
+// https://youtu.be/wDYD3JVtOys
+// https://thecodingtrain.com/learning/nature-of-code/4.1-particle-emitters.html
+
 let emitter;
 let img;
 
